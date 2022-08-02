@@ -11,6 +11,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +34,7 @@ public class User implements UserDetails, Serializable{
 	private String name;
 	private String email;
 	private String password;
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	private Set<Role> roles = new HashSet<>();
 	@OneToMany(mappedBy = "user")
 	private List<Review> reviews = new ArrayList<>();
