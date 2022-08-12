@@ -8,7 +8,7 @@ import com.devsuperior.movieflix.entities.User;
 public class ReviewDTO {
 
 	private Long id;
-	@NotBlank
+	@NotBlank(message = "Campo requerido")
 	private String text;
 	private Long movieId;
 	private UserDTO user;
