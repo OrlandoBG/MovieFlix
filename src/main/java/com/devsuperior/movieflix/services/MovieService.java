@@ -41,7 +41,7 @@ public class MovieService {
 		authService.validateMemberOrVisitor();
 		Optional<Movie> obj = repository.findById(id);
 		Movie movie = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
-		MovieDTO dto = new MovieDTO(movie,movie.getGenre());
+		MovieDTO dto = new MovieDTO(movie);
 		return dto;
 	}
 

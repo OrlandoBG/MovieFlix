@@ -23,6 +23,13 @@ public class AuthService {
 		}	
 	}
 	
+	public void validateMember() {
+		User user = authenticated();
+		if(user.hasRole("ROLE_VISITOR")) {
+			throw new ForbiddenException("Access denied");
+		}
+	}
+	
 	@Transactional(readOnly = true)
 	public User authenticated() {
 		try {
