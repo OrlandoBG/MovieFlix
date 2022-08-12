@@ -22,7 +22,7 @@ public class UserService implements UserDetailsService, Serializable{
 	private UserRepository repository;
 	
 	private static Logger logger = LoggerFactory.getLogger(UserService.class);
-
+	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		User user = repository.findByEmail(username);

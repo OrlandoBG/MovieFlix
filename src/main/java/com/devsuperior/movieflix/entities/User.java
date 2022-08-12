@@ -22,6 +22,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.devsuperior.movieflix.dto.UserDTO;
+
 @Entity
 @Table(name = "tb_user")
 public class User implements UserDetails, Serializable{
@@ -46,6 +48,13 @@ public class User implements UserDetails, Serializable{
 		this.name = name;
 		this.email = email;
 		this.password = password;
+	}
+	
+	public User(UserDTO entity) {
+		this.id = entity.getId();
+		this.name = entity.getName();
+		this.email = entity.getEmail();
+		this.password = entity.getPassword();
 	}
 
 	public Long getId() {
@@ -134,6 +143,15 @@ public class User implements UserDetails, Serializable{
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+	
+	public boolean hasRole(String role) {
+		for(Role userRole : roles) {
+			if(userRole.getAuthority().equals(role)){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }
