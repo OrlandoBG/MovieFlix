@@ -1,7 +1,5 @@
 package com.devsuperior.movieflix.dto;
 
-import java.util.Set;
-
 import com.devsuperior.movieflix.entities.User;
 
 public class UserDTO {
@@ -22,7 +20,6 @@ public class UserDTO {
 		this.id = entity.getId();
 		this.name = entity.getName();
 		this.email = entity.getEmail();
-		this.password = entity.getPassword();
 	}
 	
 	public Long getId() {

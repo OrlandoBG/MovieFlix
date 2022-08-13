@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.devsuperior.movieflix.dto.MovieDTO;
 import com.devsuperior.movieflix.entities.Genre;
 import com.devsuperior.movieflix.entities.Movie;
 
@@ -17,6 +16,6 @@ public interface MovieRepository extends JpaRepository<Movie,Long> {
 			+ "FROM Movie obj "
 			+ "WHERE (:genre IS NULL OR obj.genre = :genre) "
 			+ "ORDER BY obj.title")	
-	Page<MovieDTO> findByGenre(Genre genre, Pageable pageable);
+	Page<Movie> findByGenre(Genre genre, Pageable pageable);
 	
 }

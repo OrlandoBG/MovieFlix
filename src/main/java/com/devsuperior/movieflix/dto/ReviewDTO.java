@@ -15,10 +15,11 @@ public class ReviewDTO {
 	
 	public ReviewDTO() {}
 	
-	public ReviewDTO(Long id, String text, UserDTO user, Long movieId) {
+	public ReviewDTO(Long id, String text, Long movieId,User user) {
 		this.id = id;
 		this.text = text;
 		this.movieId = movieId;
+		this.user = new UserDTO(user);
 	}
 	
 	public ReviewDTO(Review entity) {
