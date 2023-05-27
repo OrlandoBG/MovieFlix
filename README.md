@@ -8,6 +8,6 @@ O MovieFlix proporciona aos usuários uma experiência envolvente, permitindo qu
 # Tecnologias
 Tecnologias utilizadas: Java, Spring Framework, JPA, Spring Security, OAuth2, JWT, PostgreSQL 
 
-# Diagramas do projeto
+# Diagrama de classe
 
 ![image](https://github.com/OrlandoBG/MovieFlix/assets/75863232/179b0d88-d3fc-44c0-a805-ab6915a8aaeb)
