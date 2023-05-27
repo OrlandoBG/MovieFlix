@@ -1,9 +1,13 @@
 # MovieFlix
 
-O sistema MovieFlix consiste em um banco de filmes, os quais podem ser listados e avaliados pelos usuários. Usuários podem ser visitantes (VISITOR) e membros (MEMBER).
-Apenas usuários membros podem inserir avaliações no sistema.
-Em adição, Ao acessar o sistema, o usuário deve fazer seu login. Apenas usuários logados podem navegar nos filmes.
-Logo após fazer o login, o usuário vai para a listagem de filmes, que mostra os filmes de forma paginada, ordenados alfabeticamente por título.
-O usuário pode filtrar os filmes por gênero.
-Ao selecionar um filme da listagem, é mostrada uma página de detalhes, onde é possível ver todas informações do filme, e também suas avaliações. Se o usuário for MEMBER, ele pode ainda registrar uma avaliação nessa tela.
-Um usuário possui nome, email e senha, sendo que o email é seu nome de usuário. Cada filme possui um título, subtítulo, uma imagem, ano de lançamento, sinopse, e um gênero. Os usuários membros podem registrar avaliações para os filmes. Um mesmo usuário membro pode deixar mais de uma avaliação para o mesmo filme.
+O MovieFlix é um sistema robusto que permite aos usuários explorar e avaliar filmes disponíveis em seu catálogo. O sistema diferencia entre visitantes (VISITOR) e membros (MEMBER), sendo que apenas os membros têm permissão para inserir avaliações no sistema.
+Para acessar o sistema, os usuários devem fazer login, garantindo que apenas usuários logados possam navegar pelos filmes. Após o login, os usuários são direcionados para a página de listagem de filmes, que exibe os filmes de forma paginada e ordenados alfabeticamente por título. Além disso, os usuários têm a opção de filtrar os filmes por gênero.
+Ao selecionar um filme na listagem, os usuários são redirecionados para uma página de detalhes, onde podem visualizar todas as informações relevantes sobre o filme, como título, subtítulo, imagem, ano de lançamento, sinopse e gênero. Além disso, essa página também apresenta as avaliações deixadas pelos usuários. Os membros do MovieFlix têm a capacidade adicional de registrar uma nova avaliação nessa tela específica.
+O MovieFlix proporciona aos usuários uma experiência envolvente, permitindo que eles explorem o catálogo de filmes, visualizem informações detalhadas e interajam com o sistema por meio de avaliações. A distinção entre visitantes e membros garante a segurança das funcionalidades de avaliação, tornando a plataforma um espaço interativo e confiável para os entusiastas de filmes.
+
+# Tecnologias
+Tecnologias utilizadas: Java, Spring Framework, JPA, Spring Security, OAuth2, JWT, PostgreSQL 
+
+# Diagramas do projeto
+
+![image](https://github.com/OrlandoBG/MovieFlix/assets/75863232/179b0d88-d3fc-44c0-a805-ab6915a8aaeb)
